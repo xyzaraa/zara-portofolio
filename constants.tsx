@@ -108,7 +108,7 @@ export const LATEST_PROJECTS: Project[] = [
     title: 'Mobile Phone Price Prediction',
     date: 'July 2025',
     description: 'This project predicts mobile phone prices using machine learning, involving data cleaning, feature engineering, and model evaluation with Linear Regression and XGBoost on a scraped dataset.',
-    imageUrl: 'image\hands-1851218_1280.jpg',
+    imageUrl: 'image/hands-1851218_1280.jpg',
     tags: ['Python', 'Analysis', 'Linear Regression', 'XGBoost'],
     projectUrl: 'https://github.com/xyzaraa/phone-price-prediction', 
   }
