@@ -111,6 +111,15 @@ export const LATEST_PROJECTS: Project[] = [
     imageUrl: 'image/hands-1851218_1280.jpg',
     tags: ['Python', 'Analysis', 'Linear Regression', 'XGBoost'],
     projectUrl: 'https://github.com/xyzaraa/phone-price-prediction', 
+  },
+  {
+    id: '9',
+    title: 'Steam Game Analysis and System Recommender',
+    date: 'July 2025',
+    description: 'This project performs an EDA on Steam game data to uncover insights related to game performance, user preferences, and the impact of various game attributes.',
+    imageUrl: '/image/xbox-2606608_1280.jpg',
+    tags: ['Python', 'Analysis', 'Recommender System', 'Random Forest'],
+    projectUrl: 'https://github.com/xyzaraa/steam-game-analysis', 
   }
 ];
 
