@@ -5,7 +5,7 @@ import Services from './components/Services';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
-import Certificates from './components/certificates';
+import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 
 const App: React.FC = () => {
