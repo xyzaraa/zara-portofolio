@@ -3,9 +3,9 @@
 <html lang="en" style="scroll-behavior: smooth;">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23242825'></rect><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-size='60' font-family='Poppins' font-weight='bold' fill='%23EAEAEA'>K</text></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kiara Azzahra - Data Scientist Portfolio</title>
+    <title>Kiara Azzahra - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,10 +14,17 @@
       body {
         font-family: 'Poppins', sans-serif;
         background-color: #242825;
+        background-image: radial-gradient(ellipse at top, rgba(158, 185, 145, 0.12) 0%, transparent 70%);
+        background-attachment: fixed;
         color: #EAEAEA;
       }
       .glow-border {
         box-shadow: 0 0 15px 1px rgba(158, 185, 145, 0.2), inset 0 0 8px 0px rgba(158, 185, 145, 0.1);
+      }
+      .hero-image-glow {
+        box-shadow: 0 0 25px 5px rgba(158, 185, 145, 0.25), 
+                    0 0 50px 20px rgba(158, 185, 145, 0.15),
+                    inset 0 0 10px 2px rgba(255, 255, 255, 0.1);
       }
       .skill-carousel::-webkit-scrollbar {
         display: none;
@@ -53,7 +60,6 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>

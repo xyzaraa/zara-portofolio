@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -10,7 +11,7 @@ import Contact from './components/Contact';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-[#242825] text-[#EAEAEA] overflow-x-hidden">
+    <div className="text-[#EAEAEA] overflow-x-hidden">
       <Header />
       <main className="container mx-auto px-4 md:px-8 lg:px-16">
         <Hero />
