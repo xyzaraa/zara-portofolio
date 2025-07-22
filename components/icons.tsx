@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SiMysql, SiTensorflow, SiPytorch, SiPython, SiR, SiKeras, SiFigma, SiOracle, SiJupyter, SiTelegram } from 'react-icons/si';
+import { SiMysql, SiTensorflow, SiPytorch, SiPython, SiR, SiKeras, SiFigma, SiOracle, SiJupyter, SiTelegram, SiGooglesheets, SiKaggle, SiTableau, SiScikitlearn,  } from 'react-icons/si';
 import { IoChatbubblesOutline } from 'react-icons/io5';
 
 
@@ -50,6 +50,10 @@ export const FigmaIcon = SiFigma;
 export const OracleIcon = SiOracle;
 export const JupyterIcon = SiJupyter;
 export const TelegramIcon = SiTelegram;
+export const GoogleSheetsIcon = SiGooglesheets;
+export const KaggleIcon = SiKaggle;
+export const TableauIcon = SiTableau;
+export const ScikitLearnIcon = SiScikitlearn;
 
 
 export const MailIcon: React.FC<IconProps> = ({ className }) => (

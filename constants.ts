@@ -2,7 +2,7 @@
 
 import React from 'react';
 import type { Skill, Project, ExperienceItem, Certificate } from './types';
-import { MySqlIcon, TensorFlowIcon, PyTorchIcon, PythonIcon, RLangIcon, KerasIcon, OracleIcon, NLTKIcon, FigmaIcon, JupyterIcon } from './components/icons';
+import { MySqlIcon, TensorFlowIcon, PyTorchIcon, PythonIcon, RLangIcon, KerasIcon, OracleIcon, NLTKIcon, FigmaIcon, JupyterIcon, GoogleSheetsIcon, KaggleIcon, TableauIcon, ScikitLearnIcon  } from './components/icons';
 
 export const SKILLS_DATA: Skill[] = [
   { name: 'MySQL', icon: React.createElement(MySqlIcon, { className: "w-8 h-8" }) },
@@ -15,6 +15,10 @@ export const SKILLS_DATA: Skill[] = [
   { name: 'NLTK', icon: React.createElement(NLTKIcon, { className: "w-8 h-8" }) },
   { name: 'Figma', icon: React.createElement(FigmaIcon, { className: "w-8 h-8" }) },
   { name: 'Jupyter', icon: React.createElement(JupyterIcon, { className: "w-8 h-8" }) },
+  { name: 'Google Sheet', icon: React.createElement(GoogleSheetsIcon, { className: "w-8 h-8" }) },
+  { name: 'Kaggle', icon: React.createElement(KaggleIcon, { className: "w-8 h-8" }) },
+  { name: 'Tableau', icon: React.createElement(TableauIcon, { className: "w-8 h-8" }) },
+  { name: 'ScikitLearn', icon: React.createElement(ScikitLearnIcon, { className: "w-8 h-8" }) },
 ];
 
 export const PROJECT_CATEGORIES: string[] = [
@@ -39,12 +43,66 @@ export const PROJECTS_DATA: Project[] = [
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
+    year: '2025 - Present',
+    title: 'Volunteer Staff',
+    company: 'Informatika UMM - Malang',
+    points: [
+      'I assist in processing and managing data to make it easier to understand and utilize for academic purposes.',
+    ],
+  },
+  {
     year: '2022 - Present',
     title: 'Laboratory Assistant',
     company: 'Infotech UMM - Malang',
     points: [
       'Author E-Learning Basic Programming, Data Mining, and Machine Learning',
       'Assisted the practicum activities by teaching the practitioners the material contained in the module.',
+    ],
+  },
+    {
+    year: '2022-2024',
+    title: 'Social Media Division',
+    company: 'Infotech UMM - Malang',
+    points: ["As an assistant member of the social media division, I play a role in helping to make rewind videos, content creators and interact with users on Labit UMM's Instagram. I am experienced in editing videos using the Capcut application, creating designs for quotes posters and managing Labit UMM accounts."]
+  },
+  {
+    year: '2023-2024',
+    title: 'Treasurer Infotech UMM',
+    company: 'Infotech UMM - Malang',
+    points: ["Carry out including controlling the event treasurer's budget, managing all Infotech finances / budgets, financial transparency every month, creating a treasury process flow and determining consumption for each activity"]
+  },
+    {
+    year: '2023',
+    title: 'Web Content Manager',
+    company: 'LPPI UMM - Malang',
+    points: [
+      "As a freelance Web Content Manager for a campus website (ICON-TINE, ICMEDH, INCLAR) built on WordPress, I am responsible for managing and updating various content, including announcements, academic schedules, and other important information. I organize the page structure for better navigation, edit content to ensure consistency and responsiveness across devices, and keep all published information up to date. Additionally, I coordinate with campus staff for timely content publication and perform basic optimization to ensure the website is accessible and user-friendly."
+    
+    ],
+  },
+  {
+    year: '2023',
+    title: 'Machine Learning Cohort',
+    company: 'Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka',
+    points: [
+      'Learned the basics of machine learning, including data collection, cleaning, processing, and visualization.',
+      'Gained proficiency in building AI models such as CNNs, RNNs, and NLP applications through extensive online courses.',
+      'Completed daily practice assignments and exercises with weekly deadlines, ensuring a consistent learning pace and thorough understanding of the material.',
+      'Developed a deeper understanding of complex machine learning algorithms and their real-world applications.',
+      'Implemented various techniques to solve challenging problems effectively.',
+      'ENhanced my mindset and management skills, focusing on daily life organization and productivity.',
+      'Trained in critical thinking and problem-solving, preparing for a successful career in tech.',
+      'Learned how to better prepare for entering the professional world through guidance from industry experts.',
+      'Collaborated in a team to develop an application (Product Track) aimed at preventing stunting in children from the womb, particularly benefiting pregnant women.',
+      'Applied machine learning knowledge to create a solution that positively impacts the community.'
+    ],
+  },
+  {
+    year: '2023',
+    title: 'Data Audio Reviewer',
+    company: 'Vokal AI - South Jakarta',
+    points: [
+      'Annotating Data Audio for the Ngaji.AI application, ensuring high-quality datasets for training and testing AI models.',
     ],
   },
   {
@@ -57,27 +115,14 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
       'Designed user interfaces with the team using Figma, translating feature flows into intuitive and functional UI designs.',
     ],
   },
-    {
-    year: '2023',
-    title: 'Web Content Manager',
-    company: 'LPPI UMM - Malang',
-    points: [
-      'Assisted the Product Manager in organizing a team of interns, including Mobile Developers, Backend Developers, and Quality Assurance, to develop and enhance the Ngaji.AI application.',
-      'Developed feature flows by creating use case diagrams and detailed use case reports.',
-      'Designed user interfaces with the team using Figma, translating feature flows into intuitive and functional UI designs.',
-    ],
-  },
   {
     year: '2023',
-    title: 'Machine Learning Cohort',
-    company: 'Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka',
+    title: 'Data Collecting',
+    company: 'Vokal AI - South Jakarta',
     points: [
-      'Learned the basics of machine learning, including data collection, cleaning, processing, and visualization.',
-      'Gained proficiency in building AI models such as CNNs, RNNs, and NLP applications through extensive online courses.',
-      'Completed daily practice assignments and exercises with weekly deadlines, ensuring a consistent learning pace and thorough understanding of the material.',
-      'Developed a deeper understanding of complex machine learning algorithms and their real-world applications.',
+      'Collected and processed data for the Ngaji.AI application, ensuring high-quality datasets for training and testing AI models.',
     ],
-  },
+  }
 ];
 
 export const CERTIFICATES_DATA: Certificate[] = [
