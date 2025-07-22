@@ -43,7 +43,7 @@ export const PROJECTS_DATA: Project[] = [
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
-    year: '2025 - Present',
+    year: 'May 2025 - Present',
     title: 'Volunteer Staff',
     company: 'Informatika UMM - Malang',
     points: [
@@ -51,7 +51,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     ],
   },
   {
-    year: '2022 - Present',
+    year: 'Jul 2022 - Present',
     title: 'Laboratory Assistant',
     company: 'Infotech UMM - Malang',
     points: [
@@ -60,19 +60,19 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     ],
   },
     {
-    year: '2022-2024',
+    year: 'Dec 2022 - Jul 2024',
     title: 'Social Media Division',
     company: 'Infotech UMM - Malang',
     points: ["As an assistant member of the social media division, I play a role in helping to make rewind videos, content creators and interact with users on Labit UMM's Instagram. I am experienced in editing videos using the Capcut application, creating designs for quotes posters and managing Labit UMM accounts."]
   },
   {
-    year: '2023-2024',
+    year: 'Dec 2023 - Jan 2024',
     title: 'Treasurer Infotech UMM',
     company: 'Infotech UMM - Malang',
     points: ["Carry out including controlling the event treasurer's budget, managing all Infotech finances / budgets, financial transparency every month, creating a treasury process flow and determining consumption for each activity"]
   },
     {
-    year: '2023',
+    year: 'Feb 2025 - Jun 2025',
     title: 'Web Content Manager',
     company: 'LPPI UMM - Malang',
     points: [
@@ -81,7 +81,16 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     ],
   },
   {
-    year: '2023',
+    year: 'Jul 2022 - Sep 2024',
+    title: 'Academic Support',
+    company: 'PT NyanHosting Solusi Website - Malang',
+    points: [
+      "Customer Support for NyanHosting, providing assistance to customers in managing their hosting and domain services.",
+      "Social Media Management for NyanHosting, creating content and managing interactions on social media platforms.",
+    ],
+  },
+  {
+    year: 'Feb 2024 - Jul 2024',
     title: 'Machine Learning Cohort',
     company: 'Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka',
     points: [
@@ -98,7 +107,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     ],
   },
   {
-    year: '2023',
+    year: 'Jan 2024 - Apr 2024',
     title: 'Data Audio Reviewer',
     company: 'Vokal AI - South Jakarta',
     points: [
@@ -106,7 +115,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     ],
   },
   {
-    year: '2023',
+    year: 'Nov 2023 - Dec 2023',
     title: 'Assistant Product Manager',
     company: 'Vokal AI - South Jakarta',
     points: [
@@ -116,7 +125,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     ],
   },
   {
-    year: '2023',
+    year: 'Aug 2023 - Dec 2023',
     title: 'Data Collecting',
     company: 'Vokal AI - South Jakarta',
     points: [
@@ -199,7 +208,7 @@ export const CERTIFICATES_DATA: Certificate[] = [
     imageUrl: 'certificates/Machine Learning.jpeg',
   },{
     title: 'Managing Emotions in Times of Uncertainty & Stress',
-    imageUrl: 'certificates/Managing Emotions in Times of Uncertainty & Stress.png',
+    imageUrl: 'certificates/Managing Emotions in Times of UncertaintyStress.png',
   },{
     title: 'Mathematics for Machine Learning and Data Science',
     imageUrl: 'certificates/Mathematics for Machine Learning and Data Science.jpeg',
@@ -208,13 +217,13 @@ export const CERTIFICATES_DATA: Certificate[] = [
     imageUrl: 'certificates/Natural Language Processing in TensorFlow.jpeg',
   },{
     title: 'Probability and Statistics for Machine Learning and Data Science',
-    imageUrl: 'certificates/Probability and Statistics for Machine Learning and Data Science.jpeg',
+    imageUrl: 'certificates/Probability & Statistics for Machine Learning & Data Science.jpeg',
   },{
     title: 'Process Data from Dirty to Clean',
     imageUrl: 'certificates/Process Data from Dirty to Clean.jpeg',
   },{
     title: 'Sequence, Time Series and Prediction',
-    imageUrl: 'certificates/Sequence, Time Series and Prediction.jpeg',
+    imageUrl: 'certificates/Sequences, Time Series and Prediction.jpeg',
   },{
     title: 'Share Data Through the Art of Visualization',
     imageUrl: 'certificates/Share Data Through the Art of Visualization.jpeg',
