@@ -36,8 +36,10 @@ const Hero: React.FC = () => {
           </button>
           <div className="w-full max-w-sm mt-4 p-2 bg-[#303632] rounded-full flex items-center justify-between glow-border border border-solid border-[#4a5c4f]">
             <div className="flex items-center gap-4 pl-2">
-              <a href="https://www.linkedin.com/in/kiara-azzahra-0410b3232/" className="text-[#BDBDBD] hover:text-white"><LinkedinIcon className="w-7 h-7" /></a>
-              <a href="https://github.com/xyzaraa" className="text-[#BDBDBD] hover:text-white"><GithubIcon className="w-7 h-7" /></a>
+              <a href="https://www.linkedin.com/in/kiara-azzahra-0410b3232/" target="_blank"
+  rel="noopener noreferrer" className="text-[#BDBDBD] hover:text-white"><LinkedinIcon className="w-7 h-7" /></a>
+              <a href="https://github.com/xyzaraa" target="_blank"
+  rel="noopener noreferrer" className="text-[#BDBDBD] hover:text-white"><GithubIcon className="w-7 h-7" /></a>
             </div>
             <div className="flex-grow h-1 bg-[#4a5c4f] rounded-full mx-4 relative">
               <div className="absolute top-1/2 -translate-y-1/2 left-1/4 h-2 w-5 bg-white rounded-full slider-thumb-animation"></div>
@@ -46,7 +48,7 @@ const Hero: React.FC = () => {
               <a href="mailto:kiarazzahraaa@gmail.com" className="text-[#d8d0f1] hover:text-white transition-colors">
                 <MailIcon className="w-8 h-8" />
               </a>
-              <a href="https://t.me/marvelionn" target="_blank" rel="noopener noreferrer" className="text-[#BDBDBD] hover:text-white transition-colors">
+              <a href="https://t.me/marvelionn" target="_blank" rel="noopener noreferrer" className="text-[#BDBDBD] hover:text-white transition-colors" >
                 <TelegramIcon className="w-7 h-7" />
               </a>
             </div>

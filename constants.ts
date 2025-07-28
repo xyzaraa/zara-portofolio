@@ -98,12 +98,10 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
       'Gained proficiency in building AI models such as CNNs, RNNs, and NLP applications through extensive online courses.',
       'Completed daily practice assignments and exercises with weekly deadlines, ensuring a consistent learning pace and thorough understanding of the material.',
       'Developed a deeper understanding of complex machine learning algorithms and their real-world applications.',
-      'Implemented various techniques to solve challenging problems effectively.',
-      'ENhanced my mindset and management skills, focusing on daily life organization and productivity.',
+      'Enhanced my mindset and management skills, focusing on daily life organization and productivity.',
       'Trained in critical thinking and problem-solving, preparing for a successful career in tech.',
       'Learned how to better prepare for entering the professional world through guidance from industry experts.',
       'Collaborated in a team to develop an application (Product Track) aimed at preventing stunting in children from the womb, particularly benefiting pregnant women.',
-      'Applied machine learning knowledge to create a solution that positively impacts the community.'
     ],
   },
   {

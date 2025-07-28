@@ -26,6 +26,7 @@ const Projects: React.FC = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
+              
               className={`py-2 px-5 rounded-lg text-sm font-semibold transition-colors duration-300 ${
                 activeCategory === category
                   ? 'bg-white text-[#242825]'
