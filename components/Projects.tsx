@@ -1,7 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import { PROJECT_CATEGORIES, PROJECTS_DATA } from '../constants';
+import type { Project } from '../types';
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  onProjectSelect: (project: Project) => void;
+}
+
+const Projects: React.FC<ProjectsProps> = ({ onProjectSelect }) => {
   const [activeCategory, setActiveCategory] = useState('All Categories');
   const [showAll, setShowAll] = useState(false);
 
@@ -26,7 +31,6 @@ const Projects: React.FC = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              
               className={`py-2 px-5 rounded-lg text-sm font-semibold transition-colors duration-300 ${
                 activeCategory === category
                   ? 'bg-white text-[#242825]'
@@ -40,13 +44,11 @@ const Projects: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projectsToShow.map((project, index) => (
-          <a
-            key={index}
-            href={project.projectUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block bg-[#303632] rounded-2xl overflow-hidden border border-solid border-[#4a5c4f] glow-border group transition-transform duration-300 hover:-translate-y-2"
+        {projectsToShow.map((project) => (
+          <div
+            key={project.id}
+            onClick={() => onProjectSelect(project)}
+            className="cursor-pointer block bg-[#303632] rounded-2xl overflow-hidden border border-solid border-[#4a5c4f] glow-border group transition-transform duration-300 hover:-translate-y-2"
           >
             <div className="overflow-hidden">
               <img src={project.imageUrl} alt={project.title} className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
@@ -54,7 +56,7 @@ const Projects: React.FC = () => {
             <div className="p-6">
               <h3 className="text-xl font-bold text-white">{project.title}</h3>
             </div>
-          </a>
+          </div>
         ))}
       </div>
       

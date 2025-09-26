@@ -6,10 +6,16 @@ export interface Skill {
 }
 
 export interface Project {
+  id: number;
   title: string;
   category: string;
   imageUrl: string;
-  projectUrl: string;
+  githubUrl: string;
+  description: string;
+  gallery: string[];
+  methodology: { title: string; description: string }[];
+  tools: string[];
+  language: string;
 }
 
 export interface ExperienceItem {
