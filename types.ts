@@ -11,9 +11,9 @@ export interface Project {
   category: string;
   imageUrl: string;
   githubUrl: string;
-  description: string;
   gallery: string[];
   methodology: { title: string; description: string }[];
+  readmeUrl: string;
   tools: string[];
   language: string;
 }
