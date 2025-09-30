@@ -1,6 +1,5 @@
 
-
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -11,33 +10,47 @@ import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import ProjectDetail from './components/ProjectDetail';
 import type { Project } from './types';
+import { PROJECTS_DATA } from './constants';
 
 const App: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const prevSelectedProjectRef = useRef<Project | null>(null);
-
 
   useEffect(() => {
-    // This effect runs AFTER the render pass.
-    // If the previous value was a project and the current value is null,
-    // it means we just navigated back from a project detail page.
-    if (prevSelectedProjectRef.current && selectedProject === null) {
-      // The main page is now rendered, so we can find the #projects element.
-      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-    }
+    const handlePopState = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#project-')) {
+        const projectId = parseInt(hash.substring('#project-'.length), 10);
+        const project = PROJECTS_DATA.find(p => p.id === projectId);
+        setSelectedProject(project || null);
+        if (project) window.scrollTo(0, 0);
+      } else {
+        setSelectedProject(null);
+      }
+    };
 
-    // Update the ref to the current value for the next render.
-    prevSelectedProjectRef.current = selectedProject;
-  }, [selectedProject]);
-;
+    window.addEventListener('popstate', handlePopState);
+    
+    // Handle initial page load with a potential hash
+    handlePopState();
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
+
+
 
   const handleSelectProject = (project: Project) => {
+    // Setting state directly still gives a responsive UI
     setSelectedProject(project);
+    // Then update the URL, adding a new history entry
+    window.history.pushState({ projectId: project.id }, project.title, `#project-${project.id}`);
     window.scrollTo(0, 0);
   };
 
   const handleBackToPortfolio = () => {
-    setSelectedProject(null);
+    // This will trigger the popstate event and navigate back
+    window.history.back();
   };
 
   return (
@@ -56,6 +69,9 @@ const App: React.FC = () => {
         </main>
       )}
       <Contact />
+      <footer className="text-center text-sm text-[#BDBDBD] py-6">
+        &copy; {new Date().getFullYear()} Kiara Azzahra. All rights reserved.
+      </footer>
     </div>
   );
 };

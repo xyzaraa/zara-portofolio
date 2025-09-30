@@ -2,14 +2,13 @@
 
 import React from 'react';
 import type { Skill, Project, ExperienceItem, Certificate } from './types';
-import { MySqlIcon, TensorFlowIcon, PyTorchIcon, PythonIcon, RLangIcon, KerasIcon, OracleIcon, NLTKIcon, FigmaIcon, JupyterIcon, GoogleSheetsIcon, KaggleIcon, TableauIcon, ScikitLearnIcon } from './components/icons';
+import { MySqlIcon, TensorFlowIcon, PyTorchIcon, PythonIcon, KerasIcon, OracleIcon, NLTKIcon, FigmaIcon, JupyterIcon, GoogleSheetsIcon, KaggleIcon, TableauIcon, ScikitLearnIcon } from './components/icons';
 
 export const SKILLS_DATA: Skill[] = [
   { name: 'MySQL', icon: React.createElement(MySqlIcon, { className: "w-8 h-8" }) },
   { name: 'Tensorflow', icon: React.createElement(TensorFlowIcon, { className: "w-8 h-8" }) },
   { name: 'PyTorch', icon: React.createElement(PyTorchIcon, { className: "w-8 h-8" }) },
   { name: 'Python', icon: React.createElement(PythonIcon, { className: "w-8 h-8" }) },
-  { name: 'R', icon: React.createElement(RLangIcon, { className: "w-8 h-8" }) },
   { name: 'Keras', icon: React.createElement(KerasIcon, { className: "w-8 h-8" }) },
   { name: 'Oracle', icon: React.createElement(OracleIcon, { className: "w-8 h-8" }) },
   { name: 'NLTK', icon: React.createElement(NLTKIcon, { className: "w-8 h-8" }) },
@@ -23,30 +22,51 @@ export const SKILLS_DATA: Skill[] = [
 
 export const PROJECT_CATEGORIES: string[] = [
   'All Categories',
+  'Analysis',
   'System Recommender',
   'Prediction',
   'Classification'
 ];
 
 export const PROJECTS_DATA: Project[] = [
-  { 
+  {
     id: 1,
     title: 'Steam Game Data',
-    category: 'System Recommender',
+    category: 'Analysis',
     imageUrl: 'images/Steam Game.jpg',
     githubUrl: 'https://github.com/xyzaraa/steam-game-analysis',
     gallery: ['images/Steam Game.jpg'],
     methodology: [
-      { title: 'Data Scraping', description: 'Collected game and user data from the Steam API and public datasets.' },
-      { title: 'Feature Engineering', description: 'Created features from raw data to represent user preferences and game characteristics.' },
-      { title: 'Collaborative Filtering', description: 'Implemented a collaborative filtering algorithm to find similar users and recommend games.' },
-      { title: 'Deployment', description: 'Built a simple web interface to showcase the recommendations.' }
+      {
+        title: 'Data Acquisition and Setup',
+        description: 'Imported essential Python libraries and loaded the game data from Kaggle into a DataFrame.'
+      },
+      {
+        title: 'Data Preprocessing and Cleaning',
+        description: 'Checked the dataset structure for completeness and quality, verifying data types, identifying missing values, and converting the release_date column to datetime objects.'
+      },
+      {
+        title: 'Exploratory Data Analysis (EDA)',
+        description: 'Calculated and visualized the correlation matrix between numerical variables and analyzed outliers in fields like price and estimated downloads.'
+      },
+      {
+        title: 'Key Metric Analysis',
+        description: 'Generated visualizations to determine the Top 10 most downloaded games (by rating), the most prevalent genres among these high-rated games (Action, FPS, Tactical), and the most common supported operating systems.'
+      },
+      {
+        title: 'Performance-Difficulty Correlation',
+        description: 'Analyzed the relationship between game difficulty and average performance (rating and estimated downloads) to identify a "sweet spot" for optimal engagement.'
+      },
+      {
+        title: 'Conclusion and Strategic Insights',
+        description: 'Summarized findings, concluding that gamers show a strong market preference for challenging, action-oriented games (difficulty around 4.0), which provides a promising strategy for developers.'
+      }
     ],
     readmeUrl: 'readme/README-steamgame.md',
-    tools: ['PyTorch', 'MySQL', 'Jupyter'],
+    tools: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Scikit-learn'],
     language: 'Python'
   },
-  { 
+  {
     id: 2,
     title: 'Stock Market Data',
     category: 'Prediction',
@@ -54,33 +74,60 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: 'https://github.com/xyzaraa/trade-analysis',
     gallery: ['images/Stock Market.jpg'],
     methodology: [
-      { title: 'Data Acquisition', description: 'Fetched historical stock data using financial data APIs.' },
-      { title: 'Time-Series Analysis', description: 'Analyzed data for trends, seasonality, and other patterns.' },
-      { title: 'Model Implementation', description: 'Used LSTM (Long Short-Term Memory) networks to capture temporal dependencies in the data.' },
-      { title: 'Backtesting', description: 'Evaluated the model\'s predictive performance on historical data to simulate real-world trading scenarios.' }
+      { title: 'Data Acquisition', description: 'Imported essential Python libraries (pandas, numpy, seaborn, matplotlib) and loaded the game data from Kaggle into a DataFrame.' },
+      {
+        title: 'Data Preprocessing and Cleaning',
+        description: 'Checked the dataset structure for completeness and quality, verifying data types, and identifying missing values.'
+      },
+      { title: 'Explanatory Data Analysis', description: 'Calculated and visualized the correlation plot between variables.' },
+      { title: 'Modelling', description: 'Using a regressor model to predict the stock closing prices.' }
     ],
     readmeUrl: 'readme/README-trade.md',
-    tools: ['TensorFlow', 'Keras', 'R'],
-    language: 'R'
+    tools: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Scikit-learn'],
+    language: 'Python'
   },
-  { 
+  {
     id: 3,
     title: 'Bike Rental Analysis',
-    category: 'Classification',
+    category: 'Analysis',
     imageUrl: 'images/Bike.jpg',
     githubUrl: 'https://github.com/xyzaraa/analysis_data',
     gallery: ['images/Bike.jpg'],
     methodology: [
-      { title: 'Data Cleaning', description: 'Processed missing values, duplicates, and inconsistent data from the dataset.' },
-      { title: 'Feature Engineering', description: 'Created additional features such as holiday flags, weekend indicators, and temperature ranges.' },
-      { title: 'Model Training', description: 'Applied Random Forest and Gradient Boosting models to classify and predict demand.' },
-      { title: 'Evaluation', description: 'Measured performance with accuracy and F1-score to validate predictions.' }
+      {
+        title: 'Import Library',
+        description: 'Import necessary libraries for data analysis and visualization, including numpy, matplotlib.pyplot, pandas, seaborn, datetime, babel.numbers, and streamlit.'
+      },
+      {
+        title: 'Data Wrangling',
+        description: 'Access the data by reading the day.csv and hour.csv files into pandas DataFrames (day_df and hour_df) and inspect their descriptive statistics.'
+      },
+      {
+        title: 'Assessing Data',
+        description: 'Check both the day_df and hour_df DataFrames to ensure there are no duplicated data and no missing (NA) values.'
+      },
+      {
+        title: 'Cleaning Data',
+        description: 'Change the data types in both DataFrames by converting the dteday column to datetime and categorical columns (season, yr, mnth, holiday, weekday, workingday, weathersit) to categorical type.'
+      },
+      {
+        title: 'Exploratory Data Analysis (EDA)',
+        description: 'Perform EDA by grouping data by month, weekday, and weather situation to aggregate maximum, minimum, mean, and total bicycle rental counts and analyze the correlation between wind speed and rental count.'
+      },
+      {
+        title: 'Visualization & Explanatory Analysis',
+        description: 'Create visualizations (bar plots and scatter plots) to answer the main data analysis questions regarding rental popularity by day, the influence of wind speed, and the effect of weather conditions on rentals.'
+      },
+      {
+        title: 'Dashboard with Streamlit',
+        description: 'Create and run a Streamlit application (bike_sharing_rentals.py) to display the visualizations.'
+      }
     ],
     readmeUrl: 'readme/README-bike.md',
-    tools: ['Scikit-learn', 'Matplotlib', 'Seaborn'],
+    tools: ['Matplotlib', 'Seaborn', 'Streamlit', 'Pandas', 'Plotly'],
     language: 'Python'
   },
-  { 
+  {
     id: 4,
     title: 'Food Nutrition Detection',
     category: 'Classification',
@@ -90,14 +137,14 @@ export const PROJECTS_DATA: Project[] = [
     methodology: [
       { title: 'Image Dataset', description: 'Collected food images from public datasets and online sources.' },
       { title: 'Preprocessing', description: 'Resized, normalized, and augmented images to improve model generalization.' },
-      { title: 'Model Building', description: 'Implemented a Convolutional Neural Network with TensorFlow/Keras.' },
-      { title: 'Evaluation', description: 'Validated accuracy with test data and cross-validation.' }
+      { title: 'Model Building', description: 'Implemented a Convolutional Neural Network (InceptionV3) with TensorFlow/Keras.' },
+      { title: 'Evaluation', description: 'Validated accuracy with test data ' }
     ],
     readmeUrl: 'readme/README-food-nutrition.md',
-    tools: ['TensorFlow', 'Keras', 'OpenCV'],
+    tools: ['TensorFlow', 'Keras', 'OpenCV', 'Scikit-learn', 'Numpy', 'Matplotlib', 'PIL'],
     language: 'Python'
   },
-  { 
+  {
     id: 5,
     title: 'Movie-Cartoon Recommender System',
     category: 'System Recommender',
@@ -105,16 +152,32 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: 'https://github.com/xyzaraa/movie-recommender-system',
     gallery: ['images/Movie.jpg'],
     methodology: [
-      { title: 'Data Collection', description: 'Collected ratings and metadata from online databases.' },
-      { title: 'Collaborative Filtering', description: 'Recommended items based on user similarity.' },
-      { title: 'Content-Based Filtering', description: 'Recommended based on genres, keywords, and features.' },
-      { title: 'Hybrid Model', description: 'Combined approaches to improve accuracy.' }
+      {
+        "title": "Data Acquisition and Cleaning",
+        "description": "Loaded and merged the MovieLens 'movies' and 'ratings' datasets. Conducted initial data cleaning by checking for duplicates/nulls and dropping unnecessary columns (like userId, timestamp, and rating) for content-based filtering."
+      },
+      {
+        "title": "Data Preprocessing",
+        "description": "Cleaned the movie titles by removing the year annotation. The 'genres' column was preprocessed by splitting the pipe-separated string into a list of individual genres for better feature representation."
+      },
+      {
+        "title": "Feature Engineering (TF-IDF)",
+        "description": "Applied TF-IDF Vectorizer to convert the movie titles and the processed genres into separate feature matrices. These matrices were then horizontally stacked to create a combined feature vector for the similarity model."
+      },
+      {
+        "title": "Model Implementation",
+        "description": "A **NearestNeighbors (NN)** model from scikit-learn was trained on the combined TF-IDF matrix. **Cosine similarity** was chosen as the distance metric, implemented with a **brute-force** algorithm, to find content-based matches."
+      },
+      {
+        "title": "Recommendation and Evaluation",
+        "description": "A custom function, `recommend_movies`, was created to retrieve and display the top N closest movie recommendations based on the calculated cosine distance, successfully generating a content-based recommendation list."
+      }
     ],
     readmeUrl: 'readme/README-cbrs-movie.md',
     tools: ['Python', 'Pandas', 'NumPy'],
     language: 'Python'
   },
-  { 
+  {
     id: 6,
     title: 'Spotify Data Analysis',
     category: 'Classification',
@@ -128,10 +191,10 @@ export const PROJECTS_DATA: Project[] = [
       { title: 'Visualization', description: 'Built graphs to analyze trends and outcomes.' }
     ],
     readmeUrl: '#',
-    tools: ['Python', 'Seaborn', 'Scikit-learn'],
+    tools: ['Python', 'Pandas', 'Seaborn', 'Scikit-learn'],
     language: 'Python'
   },
-  { 
+  {
     id: 7,
     title: 'Twitter (X) Sentiment Analysis',
     category: 'Classification',
@@ -139,16 +202,36 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: 'https://github.com/xyzaraa/NLP-sentiment-analysis',
     gallery: ['images/Sentiment X.jpg'],
     methodology: [
-      { title: 'Data Collection', description: 'Scraped tweets using Twitter API.' },
-      { title: 'Text Preprocessing', description: 'Tokenized, removed stopwords, and applied stemming/lemmatization.' },
-      { title: 'Model Training', description: 'Trained Naive Bayes and LSTM models on the cleaned text.' },
-      { title: 'Evaluation', description: 'Measured accuracy, precision, recall, and F1-score.' }
+      {
+        "title": "Data Loading and Structuring",
+        "description": "Loaded the Twitter training and validation datasets by unpacking the 'archive.zip' file. Corrected the DataFrame column structure by dropping extraneous columns and assigning appropriate headers for further analysis."
+      },
+      {
+        "title": "Text Cleaning and Sentiment Labeling",
+        "description": "Cleaned the tweet content by converting text to lowercase, removing non-word characters and digits, and stripping whitespace. Used the TextBlob library to calculate the polarity score for each cleaned tweet and assigned a categorical sentiment label ('positive,' 'negative,' or 'neutral') based on predefined thresholds."
+      },
+      {
+        "title": "Exploratory Visualization",
+        "description": "Analyzed the overall distribution of the newly calculated sentiment labels using a count plot. Generated a Word Cloud visualization specifically for the negative sentiment tweets to identify the most frequent terms before formal topic modeling."
+      },
+      {
+        "title": "Topic Modeling Preprocessing",
+        "description": "Further preprocessed the negative sentiment tweets by tokenizing the text and removing common English stop words (using the `STOPWORDS` set). A Gensim Dictionary and Corpus (Bag-of-Words format) were created from the tokenized data in preparation for LDA modeling."
+      },
+      {
+        "title": "Latent Dirichlet Allocation (LDA) Modeling",
+        "description": "Trained an LDA model using `gensim.models.LdaMulticore` with 5 topics on the processed negative sentiment corpus to discover underlying themes and discussions within the negative tweets."
+      },
+      {
+        "title": "Topic Model Visualization",
+        "description": "The fitted LDA model was evaluated and visualized using the pyLDAvis tool to provide an interactive interface for interpreting the discovered topics, their inter-topic distance, and the top terms associated with each."
+      }
     ],
     readmeUrl: 'readme/README-twitter.md',
-    tools: ['NLTK', 'TensorFlow', 'Keras'],
+    tools: ['NLTK', 'TensorFlow', 'Keras', 'PyLDAvis', 'Gensim', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'TextBlob'],
     language: 'Python'
   },
-  { 
+  {
     id: 8,
     title: 'Hotel Analysis',
     category: 'Prediction',
@@ -156,16 +239,32 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: 'https://github.com/xyzaraa/hotel_analysis',
     gallery: ['images/hotel.jpg', 'images/hotel-customer-dist.png', 'images/country-cust-hotel.png', 'images/compare-model-hotel.png'],
     methodology: [
-      { title: 'Data Preprocessing', description: 'Cleaned hotel booking data and handled missing values.' },
-      { title: 'Feature Engineering', description: 'Created additional features like length of stay and lead time.' },
-      { title: 'Model Building', description: 'Implemented Logistic Regression and Random Forest for prediction.' },
-      { title: 'Evaluation', description: 'Validated predictions with classification report.' }
+      {
+        title: 'Data Acquisition and Preparation',
+        description: 'The hotel booking dataset was acquired. Data cleaning was performed, including handling missing values, standardizing formats, and removing anomalies to ensure data quality.'
+      },
+      {
+        title: 'Exploratory Data Analysis (EDA)',
+        description: 'Conducted a thorough analysis to uncover key patterns in booking trends, Average Daily Rate (ADR), customer types, and cancellation rates, visualized through various charts.'
+      },
+      {
+        title: 'Feature Engineering and Selection',
+        description: 'Relevant new features were created and the most impactful variables were selected to enhance the performance of the predictive model, focusing on factors influencing cancellations.'
+      },
+      {
+        title: 'Predictive Model Development',
+        description: 'Various classification algorithms were implemented and trained to predict hotel booking cancellations, with models being tuned for optimal performance.'
+      },
+      {
+        title: 'Model Evaluation and Interpretation',
+        description: 'Model performance was evaluated using metrics such as accuracy, precision, and recall, followed by interpreting the results to derive actionable business insights and recommendations.'
+      }
     ],
     readmeUrl: 'readme/README-hotel.md',
     tools: ['Python', 'Scikit-learn', 'Pandas', 'Seaborn', 'Matplotlib', 'XGBoost', 'CatBoost'],
     language: 'Python'
   },
-  { 
+  {
     id: 9,
     title: 'Mobile Phone Price Prediction',
     category: 'Prediction',
@@ -173,10 +272,30 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: 'https://github.com/xyzaraa/phone-price-prediction',
     gallery: ['images/Mobile Phone.jpg', 'images/phone-graph.png'],
     methodology: [
-      { title: 'Data Cleaning', description: 'Removed duplicates and normalized feature scales.' },
-      { title: 'Feature Engineering', description: 'Extracted useful variables such as brand, storage capacity, and battery size.' },
-      { title: 'Model Training', description: 'Trained regression models such as Linear Regression and XGBoost Regressor.' },
-      { title: 'Evaluation', description: 'Measured performance with MAE, MSE, RMSE and R² metrics.' }
+      {
+        "title": "Data Acquisition and Initial Exploration",
+        "description": "The 'mobile.csv' dataset was loaded, followed by an initial check for its structure, missing values, and basic descriptive statistics of key numerical columns like 'Spec Score', 'rating', and 'price'."
+      },
+      {
+        "title": "Data Cleaning and Outlier Treatment",
+        "description": "Outliers in the 'Spec Score' column were identified and capped at the lower bound (60.0) using the Interquartile Range (IQR) method. The sparse 'fm' column was dropped, and missing values in text-based features like 'storage', 'processor', and 'battery' were imputed with 'Unknown'."
+      },
+      {
+        "title": "Feature Engineering and Selection",
+        "description": "New numerical features, including 'Battery\_mAh', 'Display\_Inches', 'Camera\_MP', 'RAM\_GB', and 'Internal\_Storage\_GB', were extracted from text columns. Categorical features for 'Processor\_Brand' and 'Version\_Main' were also engineered. A final set of 7 numerical and 5 categorical features was selected for modeling."
+      },
+      {
+        "title": "Data Splitting and Preprocessing Pipeline",
+        "description": "The dataset was split into 80% training and 20% testing sets. Preprocessing pipelines were established using `SimpleImputer` (median for numerical, most frequent for categorical), `StandardScaler` for numerical features, and `OneHotEncoder` for categorical features."
+      },
+      {
+        "title": "Model Implementation and Training",
+        "description": "Two machine learning models, **Linear Regression** and **XGBoost Regressor**, were implemented and trained using the defined preprocessing pipelines."
+      },
+      {
+        "title": "Performance Evaluation",
+        "description": "Both models were evaluated on the test set using multiple regression metrics, including **Mean Absolute Error (MAE)**, **Mean Squared Error (MSE)**, **Root Mean Squared Error (RMSE)**, and the **R-squared (R2) Score**."
+      }
     ],
     readmeUrl: 'readme/README-phone.md',
     tools: ['Python', 'Seaborn', 'NumPy', 'Matplotlib', 'Pandas', 'Linear Regression', 'XGBoost'],
@@ -188,7 +307,7 @@ export const PROJECTS_DATA: Project[] = [
 
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
-    {
+  {
     year: 'Jul 2022 - Aug 2025',
     title: 'Laboratory Assistant',
     company: 'Infotech UMM - Malang',

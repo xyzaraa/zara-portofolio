@@ -100,20 +100,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
             </div>
             
             {/* Methodology */}
-            <div className="bg-[#303632] p-6 rounded-2xl border border-solid border-[#4a5c4f] glow-border">
-              <h2 className="text-2xl font-bold text-[#9EB991] mb-4">Methodology</h2>
-              <ul className="space-y-4">
-                {project.methodology.map((step, index) => (
-                  <li key={index} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-[#404642] text-white rounded-full flex items-center justify-center font-bold">{index + 1}</div>
-                    <div>
-                      <h4 className="font-semibold text-white">{step.title}</h4>
-                      <p className="text-[#BDBDBD]">{step.description}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
 
           {/* Sidebar */}
@@ -140,6 +126,20 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
                   <span key={tool} className="bg-[#404642] text-white py-1 px-3 rounded-md text-sm">{tool}</span>
                 ))}
               </div>
+            </div>
+                <div className="bg-[#303632] p-6 rounded-2xl border border-solid border-[#4a5c4f] glow-border">
+              <h2 className="text-2xl font-bold text-[#9EB991] mb-4">Methodology</h2>
+              <ul className="space-y-4">
+                {project.methodology.map((step, index) => (
+                  <li key={index} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-[#404642] text-white rounded-full flex items-center justify-center font-bold">{index + 1}</div>
+                    <div>
+                      <h4 className="font-semibold text-white">{step.title}</h4>
+                      <p className="text-[#BDBDBD]">{step.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
         </div>

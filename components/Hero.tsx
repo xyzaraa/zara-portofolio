@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { DownloadIcon, LinkedinIcon, GithubIcon, TensorFlowIcon, RLangIcon, PythonIcon, KerasIcon, FigmaIcon, OracleIcon, JupyterIcon, MailIcon, TelegramIcon } from './icons';
+import { DownloadIcon, LinkedinIcon, GithubIcon, TensorFlowIcon, PythonIcon, KerasIcon, FigmaIcon, OracleIcon, JupyterIcon, MailIcon, TelegramIcon } from './icons';
 
 const FloatingIcon: React.FC<{ icon: React.ReactNode, className: string, delay?: string }> = ({ icon, className, delay = '0s' }) => (
   <div
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
           <button
             className="flex items-center gap-2 bg-[#404642] hover:bg-[#505652] text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md"
             onClick={() => {
-              window.open('/cv/CV Kiara Azzahra.pdf', '_blank');
+              window.open('cv/CV_KIARA AZZAHRAA.pdf', '_blank');
             }}
           >
             Download CV <DownloadIcon className="w-5 h-5" />
@@ -63,7 +63,6 @@ const Hero: React.FC = () => {
           </div>
           {/* Floating Icons positioned relative to the right-side container, now more spread out */}
           <FloatingIcon icon={<TensorFlowIcon className="w-8 h-8" />} className="top-10 right-0 lg:right-10" delay="0s" />
-          <FloatingIcon icon={<RLangIcon className="w-8 h-8" />} className="top-1/3 -left-8 lg:-left-28" delay="1s" />
           <FloatingIcon icon={<PythonIcon className="w-8 h-8" />} className="top-1/2 -right-8 lg:-right-4" delay="2s" />
           <FloatingIcon icon={<KerasIcon className="w-8 h-8" />} className="bottom-24 right-0 lg:right-12" delay="0.5s" />
           <FloatingIcon icon={<FigmaIcon className="w-8 h-8" />} className="bottom-1/4 -left-12 lg:-left-16" delay="1.5s" />
