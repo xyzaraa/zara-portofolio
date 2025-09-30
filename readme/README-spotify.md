@@ -1,5 +1,3 @@
-# Uncovering the Secrets Behind Spotify’s Popular Music
-
 ![Logo](Spotify%20Logo.png)
 
 ## Overview

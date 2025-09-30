@@ -1,6 +1,4 @@
-# 🚲 Bike Sharing Data Analysis  
-
-## 1. Project Overview  
+ ## 1. Project Overview  
 This project involves an exploratory data analysis (EDA) of the **Bike Sharing Dataset** to understand various factors influencing bicycle rental patterns in Washington D.C.  
 
 The analysis includes:  
@@ -11,8 +9,6 @@ The analysis includes:
 
 The main objective is to discover patterns in bike rental behavior and provide insights into how external factors affect rental demand.  
 
----
-
 ## 2. Data Analysis Questions  
 The analysis aims to answer the following key questions:  
 
@@ -20,7 +16,6 @@ The analysis aims to answer the following key questions:
 2. **Does wind speed influence customers to rent bicycles?**  
 3. **What kind of weather affects the number of bicycle rentals?**  
 
----
 
 ## 3. Conclusion  
 
@@ -29,7 +24,6 @@ The analysis aims to answer the following key questions:
 - The **lowest usage** was on **Monday (weekday code 1)** → possibly due to people returning to work routines.  
 - On weekdays (Mon–Fri), the **highest rentals** are typically on **Friday (weekday code 5)**.  
 
----
 
 ### Q2: Does wind speed influence customers to rent a bicycle?  
 - The correlation between **wind speed** and total rentals (**cnt**) is **-0.2345**.  
@@ -37,7 +31,6 @@ The analysis aims to answer the following key questions:
   - Higher wind speeds → slightly fewer rentals.  
   - The effect is weak, meaning **other factors** (like weather and temperature) have a stronger influence.  
 
----
 
 ### Q3: What kind of weather affects the number of bicycle rentals?  
 - Rentals **decrease significantly** as weather conditions worsen.  
@@ -56,4 +49,3 @@ The analysis aims to answer the following key questions:
 
 ✅ **Conclusion**: Severe weather strongly reduces the number of bike rentals.  
 
----

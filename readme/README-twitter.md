@@ -1,4 +1,3 @@
-# Storyboard
 In this project, I conducted sentiment analysis on Twitter data to gain deeper insights into public opinion, especially around topics that trigger negative reactions. The process began with thorough data preparation and text cleaning—removing unnecessary columns, converting all text to lowercase, stripping out non-alphanumeric characters and numbers, and handling missing values to make the dataset consistent and ready for analysis.
 
 For sentiment classification, I used the TextBlob library to calculate polarity scores and labeled each tweet as positive, negative, or neutral based on set thresholds. The distribution visualization revealed a significant portion of negative tweets, which became the main focus. A Word Cloud generated from negative tweets highlighted frequently used terms such as “nvidia,” “fuck,” “shit,” “game,” and “fucking,” pointing to recurring frustrations among users.

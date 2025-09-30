@@ -1,5 +1,3 @@
-# 📈 June 2025 Stock Market Story  
-
 ## Introduction  
 In June 2025, the stock market told an exciting story. Prices rose and fell, trading volumes spiked, and companies revealed their financial strengths and weaknesses. This project captures those movements, turning raw data into insights that help us understand how the market behaved and what it means for investors.  
 

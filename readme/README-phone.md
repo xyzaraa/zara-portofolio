@@ -1,5 +1,3 @@
-# 📱 Phone Price Prediction  
-
 ## Introduction  
 This project explores how the price of mobile phones can be predicted by looking at their specifications and features. The idea is to understand how elements like battery size, storage capacity, camera quality, and brand reputation influence the final market price.  
 

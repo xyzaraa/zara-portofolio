@@ -9,7 +9,6 @@ interface ProjectDetailProps {
 }
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
-  const [mainImage, setMainImage] = useState(project.gallery[0] || project.imageUrl);
   const [isMounted, setIsMounted] = useState(false);
   const [readmeContent, setReadmeContent] = useState('');
   const [isLoading, setIsLoading] = useState(true);
@@ -65,21 +64,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ project, onBack }) => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
-            {/* Image Gallery */}
-            <div className="bg-[#303632] p-4 rounded-2xl border border-solid border-[#4a5c4f] glow-border">
-              <img src={mainImage} alt={project.title} className="w-full h-auto max-h-[500px] object-contain rounded-lg mb-4" />
-              <div className="flex gap-2 justify-center">
-                {project.gallery.map((img, index) => (
-                  <button key={index} onClick={() => setMainImage(img)} className={`w-20 h-14 rounded-md overflow-hidden border-2 transition-colors ${mainImage === img ? 'border-[#9EB991]' : 'border-transparent hover:border-gray-500'}`}>
-                    <img src={img} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
-                  </button>
-                ))}
-              </div>
-            </div>
+
             
             {/* README Section */}
             <div className="bg-[#303632] p-6 rounded-2xl border border-solid border-[#4a5c4f] glow-border min-h-[200px]">
-              <h2 className="text-2xl font-bold text-[#9EB991] mb-4">Project README</h2>
               {isLoading && (
                 <div className="flex justify-center items-center h-40">
                   <div className="animate-pulse text-center text-[#BDBDBD]">Loading...</div>

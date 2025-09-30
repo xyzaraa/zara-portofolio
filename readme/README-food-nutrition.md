@@ -1,5 +1,3 @@
-# Food-Nutrition Recognition using Deep Learning (InceptionV3)
-
 As a Machine Learning practitioner, I am always intrigued by how Computer Vision technology can solve real-world problems. This project is my endeavor to build an accurate food recognition system—one that not only identifies the object but also links it to relevant nutritional information.
 
 I chose to employ the **Convolutional Neural Network (CNN)** architecture, specifically the state-of-the-art **InceptionV3** model, known for its efficiency and accuracy in image classification tasks. I executed the entire process using **TensorFlow** and **Keras**.

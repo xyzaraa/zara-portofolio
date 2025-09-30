@@ -1,4 +1,3 @@
-# 🛎️ Hotel Booking Analysis 🏨
 ![Cover Image](https://github.com/xyzaraa/hotel_analysis/blob/main/Assets/Hotel%20Cover%20Github.png?raw=true)
 
 ## Project Overview

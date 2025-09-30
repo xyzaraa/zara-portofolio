@@ -11,7 +11,6 @@ export interface Project {
   category: string;
   imageUrl: string;
   githubUrl: string;
-  gallery: string[];
   methodology: { title: string; description: string }[];
   readmeUrl: string;
   tools: string[];

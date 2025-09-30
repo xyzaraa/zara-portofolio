@@ -29,13 +29,40 @@ export const PROJECT_CATEGORIES: string[] = [
 ];
 
 export const PROJECTS_DATA: Project[] = [
-  {
+    {
     id: 1,
+    title: 'Diabetic Retinopathy Classification',
+    category: 'Classfication',
+    imageUrl: 'images/Diabetic Retinopathy.png',
+    githubUrl: 'https://github.com/xyzaraa/diabetic-retinopathy-classification',
+    methodology: [
+      {
+        title: 'Data Acquisition and Setup',
+        description: 'Import dataset from Kaggle APTOS 2019 Diabetic Retinopathy (224x224) .'
+      },
+      {
+        title: 'Data Preprocessing and Cleaning',
+        description: 'Apply CLAHE and Gaussian Blur to enhance image quality and reduce noise.'
+      },
+      {
+        title: 'Training Model Resnet50',
+        description: 'Utilize transfer learning with ResNet50 architecture, fine-tuning the model for diabetic retinopathy classification.'
+      },
+      {
+        title: 'Model Evaluation',
+        description: 'Evaluate model performance using error analysis, accuracy, precision, recall, and F1-score metrics.'
+      },
+    ],
+    readmeUrl: 'readme/README-dr.md',
+    tools: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Scikit-learn'],
+    language: 'Python'
+  },
+  {
+    id: 2,
     title: 'Steam Game Data',
     category: 'Analysis',
     imageUrl: 'images/Steam Game.jpg',
     githubUrl: 'https://github.com/xyzaraa/steam-game-analysis',
-    gallery: ['images/Steam Game.jpg'],
     methodology: [
       {
         title: 'Data Acquisition and Setup',
@@ -67,12 +94,11 @@ export const PROJECTS_DATA: Project[] = [
     language: 'Python'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Stock Market Data',
     category: 'Prediction',
     imageUrl: 'images/Stock Market.jpg',
     githubUrl: 'https://github.com/xyzaraa/trade-analysis',
-    gallery: ['images/Stock Market.jpg'],
     methodology: [
       { title: 'Data Acquisition', description: 'Imported essential Python libraries (pandas, numpy, seaborn, matplotlib) and loaded the game data from Kaggle into a DataFrame.' },
       {
@@ -87,12 +113,11 @@ export const PROJECTS_DATA: Project[] = [
     language: 'Python'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Bike Rental Analysis',
     category: 'Analysis',
     imageUrl: 'images/Bike.jpg',
     githubUrl: 'https://github.com/xyzaraa/analysis_data',
-    gallery: ['images/Bike.jpg'],
     methodology: [
       {
         title: 'Import Library',
@@ -128,12 +153,11 @@ export const PROJECTS_DATA: Project[] = [
     language: 'Python'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Food Nutrition Detection',
     category: 'Classification',
     imageUrl: 'images/Food.jpg',
     githubUrl: 'https://github.com/xyzaraa/machine-learning-cnn',
-    gallery: ['images/Food.jpg'],
     methodology: [
       { title: 'Image Dataset', description: 'Collected food images from public datasets and online sources.' },
       { title: 'Preprocessing', description: 'Resized, normalized, and augmented images to improve model generalization.' },
@@ -145,12 +169,11 @@ export const PROJECTS_DATA: Project[] = [
     language: 'Python'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Movie-Cartoon Recommender System',
     category: 'System Recommender',
     imageUrl: 'images/Movie.jpg',
     githubUrl: 'https://github.com/xyzaraa/movie-recommender-system',
-    gallery: ['images/Movie.jpg'],
     methodology: [
       {
         "title": "Data Acquisition and Cleaning",
@@ -178,12 +201,11 @@ export const PROJECTS_DATA: Project[] = [
     language: 'Python'
   },
   {
-    id: 6,
+    id: 7,
     title: 'Spotify Data Analysis',
     category: 'Classification',
     imageUrl: 'images/spotify.jpg',
     githubUrl: 'https://github.com/xyzaraa/spotify-analysis',
-    gallery: ['images/spotify.jpg'],
     methodology: [
       { title: 'Data Wrangling', description: 'Cleaned and structured raw Spotify dataset.' },
       { title: 'Feature Extraction', description: 'Derived features like tempo, energy, and acousticness.' },
@@ -195,12 +217,11 @@ export const PROJECTS_DATA: Project[] = [
     language: 'Python'
   },
   {
-    id: 7,
+    id: 8,
     title: 'Twitter (X) Sentiment Analysis',
     category: 'Classification',
     imageUrl: 'images/Sentiment X.jpg',
     githubUrl: 'https://github.com/xyzaraa/NLP-sentiment-analysis',
-    gallery: ['images/Sentiment X.jpg'],
     methodology: [
       {
         "title": "Data Loading and Structuring",
@@ -232,12 +253,11 @@ export const PROJECTS_DATA: Project[] = [
     language: 'Python'
   },
   {
-    id: 8,
+    id: 9,
     title: 'Hotel Analysis',
     category: 'Prediction',
     imageUrl: 'images/hotel.jpg',
     githubUrl: 'https://github.com/xyzaraa/hotel_analysis',
-    gallery: ['images/hotel.jpg', 'images/hotel-customer-dist.png', 'images/country-cust-hotel.png', 'images/compare-model-hotel.png'],
     methodology: [
       {
         title: 'Data Acquisition and Preparation',
@@ -265,12 +285,11 @@ export const PROJECTS_DATA: Project[] = [
     language: 'Python'
   },
   {
-    id: 9,
+    id: 10,
     title: 'Mobile Phone Price Prediction',
     category: 'Prediction',
     imageUrl: 'images/Mobile Phone.jpg',
     githubUrl: 'https://github.com/xyzaraa/phone-price-prediction',
-    gallery: ['images/Mobile Phone.jpg', 'images/phone-graph.png'],
     methodology: [
       {
         "title": "Data Acquisition and Initial Exploration",
