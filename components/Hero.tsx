@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
         <div className="relative flex justify-center items-center h-[500px] lg:h-[650px]">
           {/* Image is in an absolute container that is shifted left on large screens to be more centered */}
           <div className="absolute lg:-translate-x-1/4 w-80 h-full lg:w-[420px] bg-[#E0D5C3] rounded-t-full rounded-b-[4rem] overflow-hidden hero-image-glow">
-            <img src="https://ik.imagekit.io/bly37h3bc/nyan_1753182694676_GJ5DUPwMd.jpg" alt="Kiara Azzahra" className="w-full h-full object-cover object-center" />
+            <img src="images\Profile.png" alt="Kiara Azzahra" className="w-full h-full object-cover object-center" />
           </div>
           {/* Floating Icons positioned relative to the right-side container, now more spread out */}
           <FloatingIcon icon={<TensorFlowIcon className="w-8 h-8" />} className="top-10 right-0 lg:right-10" delay="0s" />
