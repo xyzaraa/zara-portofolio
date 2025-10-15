@@ -32,7 +32,7 @@ export const PROJECTS_DATA: Project[] = [
     {
     id: 1,
     title: 'Diabetic Retinopathy Classification',
-    category: 'Classfication',
+    category: 'Classification',
     imageUrl: 'images/Diabetic Retinopathy.png',
     githubUrl: 'https://github.com/xyzaraa/diabetic-retinopathy-classification',
     methodology: [
@@ -203,7 +203,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: 7,
     title: 'Spotify Data Analysis',
-    category: 'Classification',
+    category: 'Analysis',
     imageUrl: 'images/spotify.jpg',
     githubUrl: 'https://github.com/xyzaraa/spotify-analysis',
     methodology: [
@@ -219,7 +219,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: 8,
     title: 'Twitter (X) Sentiment Analysis',
-    category: 'Classification',
+    category: 'Analysis',
     imageUrl: 'images/Sentiment X.jpg',
     githubUrl: 'https://github.com/xyzaraa/NLP-sentiment-analysis',
     methodology: [
@@ -255,7 +255,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: 9,
     title: 'Hotel Analysis',
-    category: 'Prediction',
+    category: 'Analysis',
     imageUrl: 'images/hotel.jpg',
     githubUrl: 'https://github.com/xyzaraa/hotel_analysis',
     methodology: [

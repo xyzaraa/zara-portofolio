@@ -23,8 +23,8 @@ const Services: React.FC = () => {
       description: 'Build and train predictive models to solve problems, automate processes, and uncover hidden patterns.',
     },
     {
-      title: 'Data Visualization',
-      description: 'Present data in a clear and engaging way using charts, dashboards, and visuals that anyone can understand.',
+      title: 'Data Engineering',
+      description: 'Process, clean, and transform raw data into structured formats for analysis and reporting.',
     },
   ];
 
