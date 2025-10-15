@@ -189,7 +189,7 @@ export const PROJECTS_DATA: Project[] = [
       },
       {
         "title": "Model Implementation",
-        "description": "A **NearestNeighbors (NN)** model from scikit-learn was trained on the combined TF-IDF matrix. **Cosine similarity** was chosen as the distance metric, implemented with a **brute-force** algorithm, to find content-based matches."
+        "description": "A NearestNeighbors (NN) model from scikit-learn was trained on the combined TF-IDF matrix. Cosine similarity was chosen as the distance metric, implemented with a brute-force algorithm, to find content-based matches."
       },
       {
         "title": "Recommendation and Evaluation",
@@ -212,7 +212,7 @@ export const PROJECTS_DATA: Project[] = [
       { title: 'Model Training', description: 'Applied classification algorithms such as Decision Trees and SVM.' },
       { title: 'Visualization', description: 'Built graphs to analyze trends and outcomes.' }
     ],
-    readmeUrl: '#',
+    readmeUrl: 'readme/README-spotify.md',
     tools: ['Python', 'Pandas', 'Seaborn', 'Scikit-learn'],
     language: 'Python'
   },
@@ -309,21 +309,51 @@ export const PROJECTS_DATA: Project[] = [
       },
       {
         "title": "Model Implementation and Training",
-        "description": "Two machine learning models, **Linear Regression** and **XGBoost Regressor**, were implemented and trained using the defined preprocessing pipelines."
+        "description": "Two machine learning models, Linear Regression and XGBoost Regressor, were implemented and trained using the defined preprocessing pipelines."
       },
       {
         "title": "Performance Evaluation",
-        "description": "Both models were evaluated on the test set using multiple regression metrics, including **Mean Absolute Error (MAE)**, **Mean Squared Error (MSE)**, **Root Mean Squared Error (RMSE)**, and the **R-squared (R2) Score**."
+        "description": "Both models were evaluated on the test set using multiple regression metrics, including Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and the R-squared (R2) Score."
       }
     ],
     readmeUrl: 'readme/README-phone.md',
     tools: ['Python', 'Seaborn', 'NumPy', 'Matplotlib', 'Pandas', 'Linear Regression', 'XGBoost'],
     language: 'Python'
+  },
+    {
+    id: 10,
+    title: 'Titanic Survival Prediction',
+    category: 'Prediction',
+    imageUrl: 'images/Titanic.jpeg',
+    githubUrl: 'https://github.com/xyzaraa/ubuntu-titanic-project',
+    methodology: [
+ {
+    "title": "Data Acquisition and Exploration",
+    "description": "The Titanic dataset was loaded from Kaggle. Basic structure, missing values, and key statistics (Age, Fare, Survived) were reviewed to understand the data."
+  },
+  {
+    "title": "Exploratory Data Analysis",
+    "description": "EDA using seaborn and matplotlib revealed survival patterns: females, first-class passengers, and children had higher survival rates."
+  },
+  {
+    "title": "Data Cleaning and Encoding",
+    "description": "Missing values for Age, Fare, and Embarked were imputed using median/mode. Categorical columns (Sex, Embarked) were encoded numerically. Irrelevant columns were dropped."
+  },
+  {
+    "title": "Model Training",
+    "description": "The data was split 80/20 for training and validation. A Logistic Regression model was trained to predict survival."
+  },
+  {
+    "title": "Evaluation and Submission",
+    "description": "The model achieved ~81% validation accuracy. Predictions on the test set were exported in Kaggle submission format."
+  }
+    ],
+    readmeUrl: 'readme/README-titanic.md',
+    tools: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Scikit-learn', 'Ubuntu 22.04'],
+    language: 'Python'
   }
 ];
-
-
-
+  
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
@@ -417,6 +447,14 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 ];
 
 export const CERTIFICATES_DATA: Certificate[] = [
+  {
+    title: 'Bangkit Academy 2025 Graduate',
+    imageUrl: 'certificates/Sertifikat Bangkit.jpeg',
+  },
+  {
+    title: 'Top 50 Capstone Projects in Bangkit Academy 2025',
+    imageUrl: 'certificates/Sertifikat Top 50 Capstone Bangkit.jpeg',
+  },
   {
     title: 'Advanced Deployment Scenarios With Tensorflow',
     imageUrl: 'certificates/Advanced deployment scenarios with tensorflow.jpeg',
