@@ -321,7 +321,7 @@ export const PROJECTS_DATA: Project[] = [
     language: 'Python'
   },
     {
-    id: 10,
+    id: 11,
     title: 'Titanic Survival Prediction',
     category: 'Prediction',
     imageUrl: 'images/Titanic.jpeg',
