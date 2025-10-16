@@ -129,7 +129,7 @@ export const PROJECTS_DATA: Project[] = [
       },
       {
         title: 'Assessing Data',
-        description: 'Check both the day_df and hour_df DataFrames to ensure there are no duplicated data and no missing (NA) values.'
+        description: 'Check both the day_df and hour_df DataFrames to ensure there are no duplicated data and no missing values.'
       },
       {
         title: 'Cleaning Data',
