@@ -16,7 +16,7 @@ const App: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
-    const handlePopState = () => {
+    const handleHashNavigation = () => {
       const hash = window.location.hash;
       if (hash.startsWith('#project-')) {
         const projectId = parseInt(hash.substring('#project-'.length), 10);
@@ -25,25 +25,36 @@ const App: React.FC = () => {
         if (project) window.scrollTo(0, 0);
       } else {
         setSelectedProject(null);
+        // After state update, main page will render.
+        // Wait for render before scrolling to a section anchor.
+        setTimeout(() => {
+          const currentHash = window.location.hash;
+          if (currentHash && !currentHash.startsWith('#project-')) {
+            const id = currentHash.substring(1);
+            const element = document.getElementById(id);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }, 100);
       }
     };
 
-    window.addEventListener('popstate', handlePopState);
+    window.addEventListener('popstate', handleHashNavigation);
     
     // Handle initial page load with a potential hash
-    handlePopState();
+    handleHashNavigation();
 
     return () => {
-      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('popstate', handleHashNavigation);
     };
   }, []);
 
 
 
   const handleSelectProject = (project: Project) => {
-    // Setting state directly still gives a responsive UI
     setSelectedProject(project);
-    // Then update the URL, adding a new history entry
+    // Update URL, adding a new history entry
     window.history.pushState({ projectId: project.id }, project.title, `#project-${project.id}`);
     window.scrollTo(0, 0);
   };
@@ -69,9 +80,7 @@ const App: React.FC = () => {
         </main>
       )}
       <Contact />
-      <footer className="text-center text-sm text-[#BDBDBD] py-6">
-        &copy; {new Date().getFullYear()} Kiara Azzahra. All rights reserved.
-      </footer>
+
     </div>
   );
 };

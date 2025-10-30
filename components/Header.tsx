@@ -13,8 +13,9 @@ const Header: React.FC = () => {
   ];
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    // Allow native browser anchor link navigation.
+    // Smooth scrolling is handled by the `scroll-behavior: smooth` CSS rule in index.html.
+    // This also ensures the URL hash is updated for shareable links.
     setIsMenuOpen(false);
   };
   
