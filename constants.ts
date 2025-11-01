@@ -558,7 +558,43 @@ export const CERTIFICATES_DATA: Certificate[] = [
     imageUrl: 'certificates/TensorFlow Data and Deployment.jpeg',
   },
   {
-    title: 'Using Python to Interact with the Operating System',
-    imageUrl: 'certificates/Using Python to Interact with the Operating System.jpeg',
-  }
+    title: 'Alibaba Cloud Platform for AI ',
+    imageUrl: 'certificates/Alibaba Cloud Platform for AI.png',
+  },
+  {
+    title: 'Dive Into Generative AI',
+    imageUrl: 'certificates/Dive Into Generative AI.png',
+  },
+  {
+    title: 'Fundamentals of RAG and Agents',
+    imageUrl: 'certificates/Fundamentals of RAG and Agents.png',
+  },
+  {
+    title: 'Getting to Know Generative AI and its Concepts',
+    imageUrl: 'certificates/Getting to Know Generative AI and its Concepts.png',
+  },
+  {
+    title: 'GPU-accelerated ECS',
+    imageUrl: 'certificates/GPU-accelerated ECS.png',
+  },
+  {
+    title: 'Model Studio Fundamentals',
+    imageUrl: 'certificates/Model Studio Fundamentals.png',
+  },
+  {
+    title: 'Prompt Engineering Fundamentals',
+    imageUrl: 'certificates/Prompt Engineering Fundamentals.png',
+  },
+  {
+    title: 'The Inner Workings of Generative AI',
+    imageUrl: 'certificates/The Inner Workings od Genertive AI.png',
+  },
+  {
+    title: 'The Large World of Language Responsibility',
+    imageUrl: 'certificates/The Large World of Language Models.png',
+  },
+  {
+    title: 'Using Generative AI Ethically and Responsibility',
+    imageUrl: 'certificates/Using Generative AI Ethically and Responsibility.png',
+  },
 ];
