@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
           <button
             className="flex items-center gap-2 bg-[#404642] hover:bg-[#505652] text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md"
             onClick={() => {
-              window.open('cv/CV_KIARA AZZAHRAA.pdf', '_blank');
+              window.open('cv/CV_KIARA AZZAHRA.pdf', '_blank');
             }}
           >
             Download CV <DownloadIcon className="w-5 h-5" />
